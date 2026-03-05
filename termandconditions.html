@@ -142,6 +142,41 @@
                         flex-grow: 1; /* allows the last section to take up any remaining space, pushing the footer to the bottom of the page */
                     }
 
+                    .form-section { /* formatting for the form */
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 1rem;
+                    }
+                        .form-section form {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 1rem;
+                            width: 100%;
+                            max-width: 400px;
+                        }
+
+                        .form-section label {
+                            font-weight: bold;
+                            margin-bottom: 0.5rem;
+                        }
+
+                        button {
+                            padding: 5px 10px; /* size of buttons */
+                            border-radius: 6px; /* rounding the sides */
+                        }
+
+                        button[type="reset"],
+                        button[type="submit"] {
+                            background: var(--background-color);
+                            color: var(--text-color);
+                        }
+
+                        button[type="reset"]:hover,
+                        button[type="submit"]:hover {
+                            background: var(--main-color);
+                        }
+
                     .split-section { /* formatting for the split section */
                         display: flex;
                         gap: 2rem;
@@ -213,7 +248,7 @@
                         <a class="nav-link" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="portfolio.html">portfolio
+                        <a class="nav-link" href="portfolio.html">Portfolio
                         </a>
                     </li>
                     <li class="nav-item">
@@ -240,16 +275,18 @@
         <p>
             none lmao
         </p>
+        <div class="form-section">
+            <button type="submit">Agree to Terms and Conditions</button>
+        </div>
     </section>
 
     <!-- Page FooterMenu -->
     <footer>
         <div class="footer-content">
             &copy; 2026 Connor Wolfe. All rights reserved.
-            <a href="https://github.com/ConWolfMan">GitHub</a>
             <a href="termandconditions.html">Terms and Conditions</a>
             <a href="privacypolicy.html">Privacy Policy</a>
-            <a href="cookiepolicy.html active">Cookie Policy</a>
+            <a href="cookiepolicy.html">Cookie Policy</a>
         </div>
     </body>
  </html>

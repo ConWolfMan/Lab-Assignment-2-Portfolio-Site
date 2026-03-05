@@ -27,7 +27,7 @@
                 background-color: var(--background-color);
                 color: var(--text-color);
             }
-
+            
             /*/// Header menu, formatting options, so that the user can navigate to the other pages ///*/
             nav.navbar { /* formmating options for navgation bar, this is the header. Not to be confused with the header styling option for text and stuff*/
                 background-color: var(--headerandfooter-color); /* should be a different color from the background to set it apart*/
@@ -141,6 +141,10 @@
                     padding: 2rem;
                     color: var(--text-color);
                     overflow: hidden;
+                    box-shadow: 
+                        0 2px 0 0 var(--accent-color), /* inner border */
+                        0 6px 0 0 var(--main-color), /* middle border */
+                        0 8px 0 0 var(--accent-color); /* outer border */
                 }
                     .experience-section h2, h3, h4, h5, h6 { /* formatting for the header in the experience section */
                         text-align: center;
@@ -162,6 +166,73 @@
                         text-align: left;
                     }
                 /*// ____________ //*/
+
+               /*// Page section (note to self: in the future you don't need to make different section classes for each section. You can just make a section class) //*/
+                section.page-section { /* formatting for the about section */
+                    padding: 2rem;
+                    color: var(--text-color);
+                    border-bottom: 2px solid var(--accent-color);
+                }
+
+                    .page-section h2,
+                    .page-section h3,
+                    .page-section h4, 
+                    .page-section h5, 
+                    .page-section h6 { /* formatting for the header in the about section */
+                        text-align: center;
+                        color: var(--text-color);
+                        font-size: 32px;
+                        margin-bottom: 1rem;
+                    }
+
+                    .page-section p { /* formatting for the paragraph in the about section */
+                        text-align: center;
+                        font-size: 18px;
+                        line-height: 1.5;
+                    }
+
+                    .page-section dd { /* formatting for the definition list in the about section */
+                        margin-bottom: 1rem;
+                        text-align: center;
+                    }
+
+                    .page-section iframe {
+                        display: block; /*Lets me center the iframe*/
+                        height: 95%;
+                        width: 75%;
+                        min-width: auto;
+                        min-height: 1000px;
+                        margin: 0 auto; /* centers the iframe horizontally */
+                    }
+
+                    section.page-section:last-of-type {
+                        flex-grow: 1; /* allows the last section to take up any remaining space, pushing the footer to the bottom of the page */
+                    }
+
+                    .split-section { /* formatting for the split section */
+                        display: flex;
+                        gap: 2rem;
+                    }
+
+                        .split {
+                            flex: 1;
+                            min-width: 50%;
+                        }
+
+                        .split img {
+                            justify-content: center;
+                            width: 95%;
+                            height: auto;
+                        }
+
+                        .split iframe {
+                            height: 100%;
+                            width: 95%;
+                            min-width: 300px;
+                            min-height: 600px;
+                        }
+
+
 
             /*/// _________________________________________________________________________________________ ///*/
 
@@ -209,7 +280,7 @@
                         <a class="nav-link" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="portfolio.html">portfolio
+                        <a class="nav-link" href="portfolio.html">Portfolio
                         </a>
                     </li>
                     <li class="nav-item">
@@ -272,11 +343,26 @@
             </table>
         </section>
 
+    <!-- MyResume Section -->
+    <section class="page-section">
+        <h3> Resume </h3>
+        <iframe src="CDWResume.pdf" title="Resume"></iframe>
+    </section>
+
+    <!-- Github section -->
+    <section class="page-section">
+        <a href="https://github.com/ConWolfMan">
+            <h3>
+                My GitHub
+            </h3>
+        </a>
+    </section>
+
+
     <!-- Page FooterMenu -->
     <footer>
         <div class="footer-content">
             &copy; 2026 Connor Wolfe. All rights reserved.
-            <a href="https://github.com/ConWolfMan">GitHub</a>
             <a href="termandconditions.html">Terms and Conditions</a>
             <a href="privacypolicy.html">Privacy Policy</a>
             <a href="cookiepolicy.html">Cookie Policy</a>

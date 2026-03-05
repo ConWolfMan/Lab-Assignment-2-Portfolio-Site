@@ -131,11 +131,12 @@
                     }
 
                     .page-section iframe {
-                        justify-content: center;
+                        display: block; /*Lets me center the iframe*/
                         height: 95%;
                         width: 75%;
                         min-width: auto;
                         min-height: 1000px;
+                        margin: 0 auto; /* centers the iframe horizontally */
                     }
 
                     section.page-section:last-of-type {
@@ -213,7 +214,7 @@
                         <a class="nav-link" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="portfolio.html">portfolio
+                        <a class="nav-link active" href="portfolio.html">Portfolio
                         </a>
                     </li>
                     <li class="nav-item">
@@ -231,8 +232,9 @@
 
     <!-- Page Header/Brand section -->
         <header class="top-header">
-            <h1> Porfolio </h1>
-            <h2> My Work | Resume </h2>
+            <h1> Portfolio </h1>
+            <h2>
+                Work | Resume | GitHub </h2>
             </div>
         </header>
 
@@ -321,11 +323,19 @@
         <iframe src="CDWResume.pdf" title="Resume"></iframe>
     </section>
 
+    <!-- Github section -->
+    <section class="page-section">
+        <a href="https://github.com/ConWolfMan">
+            <h3>
+                My GitHub
+            </h3>
+        </a>
+    </section>
+
     <!-- Page FooterMenu -->
     <footer>
         <div class="footer-content">
             &copy; 2026 Connor Wolfe. All rights reserved.
-            <a href="https://github.com/ConWolfMan">GitHub</a>
             <a href="termandconditions.html">Terms and Conditions</a>
             <a href="privacypolicy.html">Privacy Policy</a>
             <a href="cookiepolicy.html">Cookie Policy</a>

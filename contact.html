@@ -131,11 +131,12 @@
                     }
 
                     .page-section iframe {
-                        justify-content: center;
+                        display: block; /*Lets me center the iframe*/
                         height: 65%;
                         width: 65%;
                         min-width: 50px;
                         min-height: 500px;
+                        margin: 0 auto;
                     }
 
                     section.page-section:last-of-type {
@@ -253,10 +254,10 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link contact" href="contact.html">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="sign_in.html">Sign in</a>
+                        <a class="nav-link" href="sign_in.html">Sign in</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="sign_up.html">Sign up</a>
@@ -267,21 +268,21 @@
 
     <!-- Page Header -->
     <header class="top-header">
-            <h1>Sign In</h1>
+            <h1>Contact Me</h1>
     </header>
 
-  <!-- Form -->
+    <!-- Form -->
     <section class="page-section">
         <div class="form-section">
             <form>
-                <label for="username">Name:</label>
-                <input type="text" id="username" name="username" required>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
 
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
 
                 <div>
                     <button type="submit">Submit</button>
@@ -289,6 +290,14 @@
                 </div>
             </form>
     </section>
+
+    <!-- Embedded map -->
+     <section class="page-section">
+        <h2>Location</h2>
+            <iframe 
+                src="https://maps.google.com/maps?width=600&height=400&hl=en&q=University%20of%20Idaho&t=&z=14&ie=UTF8&iwloc=B&output=embed">
+            </iframe>
+     </section>
 
     <!-- Page FooterMenu -->
     <footer>
